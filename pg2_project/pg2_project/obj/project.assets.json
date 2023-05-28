@@ -1,0 +1,863 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "CSCore/1.2.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35-client/CSCore.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "glfw/3.3.8": {
+        "type": "package"
+      },
+      "OpenTK/4.7.7": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK.Compute": "4.7.7",
+          "OpenTK.Core": "4.7.7",
+          "OpenTK.Graphics": "4.7.7",
+          "OpenTK.Input": "4.7.7",
+          "OpenTK.Mathematics": "4.7.7",
+          "OpenTK.OpenAL": "4.7.7",
+          "OpenTK.Windowing.Common": "4.7.7",
+          "OpenTK.Windowing.Desktop": "4.7.7",
+          "OpenTK.Windowing.GraphicsLibraryFramework": "4.7.7"
+        }
+      },
+      "OpenTK.Compute/4.7.7": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/OpenTK.Compute.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/OpenTK.Compute.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "OpenTK.Core/4.7.7": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/OpenTK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/OpenTK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "OpenTK.Graphics/4.7.7": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK.Core": "[4.7.7, 4.8.0)",
+          "OpenTK.Mathematics": "[4.7.7, 4.8.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/OpenTK.Graphics.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/OpenTK.Graphics.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "OpenTK.Input/4.7.7": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/OpenTK.Input.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenTK.Input.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "OpenTK.Mathematics/4.7.7": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/OpenTK.Mathematics.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/OpenTK.Mathematics.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "OpenTK.OpenAL/4.7.7": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK.Core": "[4.7.7, 4.8.0)",
+          "OpenTK.Mathematics": "[4.7.7, 4.8.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/OpenTK.OpenAL.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/OpenTK.OpenAL.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "OpenTK.redist.glfw/3.3.8.30": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libglfw.so.3.3": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-arm64/native/libglfw.3.dylib": {
+            "assetType": "native",
+            "rid": "osx-arm64"
+          },
+          "runtimes/osx-x64/native/libglfw.3.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/glfw3.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/glfw3.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "OpenTK.Windowing.Common/4.7.7": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK.Core": "[4.7.7, 4.8.0)",
+          "OpenTK.Mathematics": "[4.7.7, 4.8.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/OpenTK.Windowing.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/OpenTK.Windowing.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "OpenTK.Windowing.Desktop/4.7.7": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK.Core": "[4.7.7, 4.8.0)",
+          "OpenTK.Mathematics": "[4.7.7, 4.8.0)",
+          "OpenTK.Windowing.Common": "[4.7.7, 4.8.0)",
+          "OpenTK.Windowing.GraphicsLibraryFramework": "[4.7.7, 4.8.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/OpenTK.Windowing.Desktop.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/OpenTK.Windowing.Desktop.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "OpenTK.Windowing.GraphicsLibraryFramework/4.7.7": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK.Core": "[4.7.7, 4.8.0)",
+          "OpenTK.redist.glfw": "3.3.8.30"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/OpenTK.Windowing.GraphicsLibraryFramework.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/OpenTK.Windowing.GraphicsLibraryFramework.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SixLabors.ImageSharp/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/SixLabors.ImageSharp.props": {}
+        }
+      },
+      "StbImageSharp/2.27.13": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CSCore/1.2.1.2": {
+      "sha512": "DoQKUcdZLQawo3mOg8CvujJD9YkvTt6NtEu7S+OCo8+ySl8eCeUw4LFyL2E1OcAkPU918HZM6sUNcvIMcXWg6g==",
+      "type": "package",
+      "path": "cscore/1.2.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "cscore.1.2.1.2.nupkg.sha512",
+        "cscore.nuspec",
+        "lib/net35-client/CSCore.XML",
+        "lib/net35-client/CSCore.dll"
+      ]
+    },
+    "glfw/3.3.8": {
+      "sha512": "XWwZh6BByUqFF5ZYQVG/1ipBEpjy01pnDONQOHD82Tm0nedhzWvhRqrKVvpB6v7/5pLR7f35sJxqYmo+C9wJTQ==",
+      "type": "package",
+      "path": "glfw/3.3.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/native/bin/dynamic/v100/win32/glfw3.dll",
+        "build/native/bin/dynamic/v110/win32/glfw3.dll",
+        "build/native/bin/dynamic/v110/x64/glfw3.dll",
+        "build/native/bin/dynamic/v120/win32/glfw3.dll",
+        "build/native/bin/dynamic/v120/x64/glfw3.dll",
+        "build/native/bin/dynamic/v140/win32/glfw3.dll",
+        "build/native/bin/dynamic/v140/x64/glfw3.dll",
+        "build/native/bin/dynamic/v141/win32/glfw3.dll",
+        "build/native/bin/dynamic/v141/x64/glfw3.dll",
+        "build/native/bin/dynamic/v142/win32/glfw3.dll",
+        "build/native/bin/dynamic/v142/x64/glfw3.dll",
+        "build/native/bin/dynamic/v143/win32/glfw3.dll",
+        "build/native/bin/dynamic/v143/x64/glfw3.dll",
+        "build/native/glfw-propertiesui.xml",
+        "build/native/glfw.targets",
+        "build/native/include/GLFW/glfw3.h",
+        "build/native/include/GLFW/glfw3native.h",
+        "build/native/lib/dynamic/v100/win32/glfw3dll.lib",
+        "build/native/lib/dynamic/v110/win32/glfw3dll.lib",
+        "build/native/lib/dynamic/v110/x64/glfw3dll.lib",
+        "build/native/lib/dynamic/v120/win32/glfw3dll.lib",
+        "build/native/lib/dynamic/v120/x64/glfw3dll.lib",
+        "build/native/lib/dynamic/v140/win32/glfw3dll.lib",
+        "build/native/lib/dynamic/v140/x64/glfw3dll.lib",
+        "build/native/lib/dynamic/v141/win32/glfw3dll.lib",
+        "build/native/lib/dynamic/v141/x64/glfw3dll.lib",
+        "build/native/lib/dynamic/v142/win32/glfw3dll.lib",
+        "build/native/lib/dynamic/v142/x64/glfw3dll.lib",
+        "build/native/lib/dynamic/v143/win32/glfw3dll.lib",
+        "build/native/lib/dynamic/v143/x64/glfw3dll.lib",
+        "build/native/lib/static/v100/win32/glfw3.lib",
+        "build/native/lib/static/v110/win32/glfw3.lib",
+        "build/native/lib/static/v110/x64/glfw3.lib",
+        "build/native/lib/static/v120/win32/glfw3.lib",
+        "build/native/lib/static/v120/x64/glfw3.lib",
+        "build/native/lib/static/v140/win32/glfw3.lib",
+        "build/native/lib/static/v140/x64/glfw3.lib",
+        "build/native/lib/static/v141/win32/glfw3.lib",
+        "build/native/lib/static/v141/x64/glfw3.lib",
+        "build/native/lib/static/v142/win32/glfw3.lib",
+        "build/native/lib/static/v142/x64/glfw3.lib",
+        "build/native/lib/static/v143/win32/glfw3.lib",
+        "build/native/lib/static/v143/x64/glfw3.lib",
+        "docs/LICENSE.md",
+        "docs/README.md",
+        "docs/glfw_sq.png",
+        "docs/html/bc_s.png",
+        "docs/html/bdwn.png",
+        "docs/html/build_8dox.html",
+        "docs/html/build_guide.html",
+        "docs/html/closed.png",
+        "docs/html/compat_8dox.html",
+        "docs/html/compat_guide.html",
+        "docs/html/compile_8dox.html",
+        "docs/html/compile_guide.html",
+        "docs/html/context_8dox.html",
+        "docs/html/context_guide.html",
+        "docs/html/deprecated.html",
+        "docs/html/dir_1dfd43b3952c5bc1ba15d15b12afff7b.html",
+        "docs/html/dir_4351554941a2744586042c1cf3cf139a.html",
+        "docs/html/dir_f6ba4c3dca55a8d4e7d63c8235e0ad43.html",
+        "docs/html/dir_fda32cf7bec00275262cb8799a618f76.html",
+        "docs/html/doc.png",
+        "docs/html/doxygen.css",
+        "docs/html/doxygen.svg",
+        "docs/html/dynsections.js",
+        "docs/html/extra.css",
+        "docs/html/files.html",
+        "docs/html/folderclosed.png",
+        "docs/html/folderopen.png",
+        "docs/html/glfw3_8h.html",
+        "docs/html/glfw3_8h_source.html",
+        "docs/html/glfw3native_8h.html",
+        "docs/html/glfw3native_8h_source.html",
+        "docs/html/group__buttons.html",
+        "docs/html/group__context.html",
+        "docs/html/group__errors.html",
+        "docs/html/group__gamepad__axes.html",
+        "docs/html/group__gamepad__buttons.html",
+        "docs/html/group__hat__state.html",
+        "docs/html/group__init.html",
+        "docs/html/group__input.html",
+        "docs/html/group__joysticks.html",
+        "docs/html/group__keys.html",
+        "docs/html/group__mods.html",
+        "docs/html/group__monitor.html",
+        "docs/html/group__native.html",
+        "docs/html/group__shapes.html",
+        "docs/html/group__vulkan.html",
+        "docs/html/group__window.html",
+        "docs/html/index.html",
+        "docs/html/input_8dox.html",
+        "docs/html/input_guide.html",
+        "docs/html/internal_8dox.html",
+        "docs/html/internals_guide.html",
+        "docs/html/intro_8dox.html",
+        "docs/html/intro_guide.html",
+        "docs/html/jquery.js",
+        "docs/html/main_8dox.html",
+        "docs/html/menu.js",
+        "docs/html/menudata.js",
+        "docs/html/modules.html",
+        "docs/html/monitor_8dox.html",
+        "docs/html/monitor_guide.html",
+        "docs/html/moving_8dox.html",
+        "docs/html/moving_guide.html",
+        "docs/html/nav_f.png",
+        "docs/html/nav_g.png",
+        "docs/html/nav_h.png",
+        "docs/html/news.html",
+        "docs/html/news_8dox.html",
+        "docs/html/open.png",
+        "docs/html/pages.html",
+        "docs/html/quick_8dox.html",
+        "docs/html/quick_guide.html",
+        "docs/html/search/all_0.html",
+        "docs/html/search/all_0.js",
+        "docs/html/search/all_1.html",
+        "docs/html/search/all_1.js",
+        "docs/html/search/all_10.html",
+        "docs/html/search/all_10.js",
+        "docs/html/search/all_11.html",
+        "docs/html/search/all_11.js",
+        "docs/html/search/all_2.html",
+        "docs/html/search/all_2.js",
+        "docs/html/search/all_3.html",
+        "docs/html/search/all_3.js",
+        "docs/html/search/all_4.html",
+        "docs/html/search/all_4.js",
+        "docs/html/search/all_5.html",
+        "docs/html/search/all_5.js",
+        "docs/html/search/all_6.html",
+        "docs/html/search/all_6.js",
+        "docs/html/search/all_7.html",
+        "docs/html/search/all_7.js",
+        "docs/html/search/all_8.html",
+        "docs/html/search/all_8.js",
+        "docs/html/search/all_9.html",
+        "docs/html/search/all_9.js",
+        "docs/html/search/all_a.html",
+        "docs/html/search/all_a.js",
+        "docs/html/search/all_b.html",
+        "docs/html/search/all_b.js",
+        "docs/html/search/all_c.html",
+        "docs/html/search/all_c.js",
+        "docs/html/search/all_d.html",
+        "docs/html/search/all_d.js",
+        "docs/html/search/all_e.html",
+        "docs/html/search/all_e.js",
+        "docs/html/search/all_f.html",
+        "docs/html/search/all_f.js",
+        "docs/html/search/classes_0.html",
+        "docs/html/search/classes_0.js",
+        "docs/html/search/close.svg",
+        "docs/html/search/defines_0.html",
+        "docs/html/search/defines_0.js",
+        "docs/html/search/files_0.html",
+        "docs/html/search/files_0.js",
+        "docs/html/search/files_1.html",
+        "docs/html/search/files_1.js",
+        "docs/html/search/files_2.html",
+        "docs/html/search/files_2.js",
+        "docs/html/search/files_3.html",
+        "docs/html/search/files_3.js",
+        "docs/html/search/files_4.html",
+        "docs/html/search/files_4.js",
+        "docs/html/search/files_5.html",
+        "docs/html/search/files_5.js",
+        "docs/html/search/files_6.html",
+        "docs/html/search/files_6.js",
+        "docs/html/search/files_7.html",
+        "docs/html/search/files_7.js",
+        "docs/html/search/files_8.html",
+        "docs/html/search/files_8.js",
+        "docs/html/search/functions_0.html",
+        "docs/html/search/functions_0.js",
+        "docs/html/search/groups_0.html",
+        "docs/html/search/groups_0.js",
+        "docs/html/search/groups_1.html",
+        "docs/html/search/groups_1.js",
+        "docs/html/search/groups_2.html",
+        "docs/html/search/groups_2.js",
+        "docs/html/search/groups_3.html",
+        "docs/html/search/groups_3.js",
+        "docs/html/search/groups_4.html",
+        "docs/html/search/groups_4.js",
+        "docs/html/search/groups_5.html",
+        "docs/html/search/groups_5.js",
+        "docs/html/search/groups_6.html",
+        "docs/html/search/groups_6.js",
+        "docs/html/search/groups_7.html",
+        "docs/html/search/groups_7.js",
+        "docs/html/search/groups_8.html",
+        "docs/html/search/groups_8.js",
+        "docs/html/search/groups_9.html",
+        "docs/html/search/groups_9.js",
+        "docs/html/search/groups_a.html",
+        "docs/html/search/groups_a.js",
+        "docs/html/search/mag_sel.svg",
+        "docs/html/search/nomatches.html",
+        "docs/html/search/pages_0.html",
+        "docs/html/search/pages_0.js",
+        "docs/html/search/pages_1.html",
+        "docs/html/search/pages_1.js",
+        "docs/html/search/pages_2.html",
+        "docs/html/search/pages_2.js",
+        "docs/html/search/pages_3.html",
+        "docs/html/search/pages_3.js",
+        "docs/html/search/pages_4.html",
+        "docs/html/search/pages_4.js",
+        "docs/html/search/pages_5.html",
+        "docs/html/search/pages_5.js",
+        "docs/html/search/pages_6.html",
+        "docs/html/search/pages_6.js",
+        "docs/html/search/pages_7.html",
+        "docs/html/search/pages_7.js",
+        "docs/html/search/pages_8.html",
+        "docs/html/search/pages_8.js",
+        "docs/html/search/pages_9.html",
+        "docs/html/search/pages_9.js",
+        "docs/html/search/pages_a.html",
+        "docs/html/search/pages_a.js",
+        "docs/html/search/search.css",
+        "docs/html/search/search.js",
+        "docs/html/search/search_l.png",
+        "docs/html/search/search_m.png",
+        "docs/html/search/search_r.png",
+        "docs/html/search/searchdata.js",
+        "docs/html/search/typedefs_0.html",
+        "docs/html/search/typedefs_0.js",
+        "docs/html/search/variables_0.html",
+        "docs/html/search/variables_0.js",
+        "docs/html/search/variables_1.html",
+        "docs/html/search/variables_1.js",
+        "docs/html/search/variables_2.html",
+        "docs/html/search/variables_2.js",
+        "docs/html/search/variables_3.html",
+        "docs/html/search/variables_3.js",
+        "docs/html/search/variables_4.html",
+        "docs/html/search/variables_4.js",
+        "docs/html/search/variables_5.html",
+        "docs/html/search/variables_5.js",
+        "docs/html/search/variables_6.html",
+        "docs/html/search/variables_6.js",
+        "docs/html/search/variables_7.html",
+        "docs/html/search/variables_7.js",
+        "docs/html/spaces.svg",
+        "docs/html/splitbar.png",
+        "docs/html/structGLFWgamepadstate.html",
+        "docs/html/structGLFWgammaramp.html",
+        "docs/html/structGLFWimage.html",
+        "docs/html/structGLFWvidmode.html",
+        "docs/html/sync_off.png",
+        "docs/html/sync_on.png",
+        "docs/html/tab_a.png",
+        "docs/html/tab_b.png",
+        "docs/html/tab_h.png",
+        "docs/html/tab_s.png",
+        "docs/html/tabs.css",
+        "docs/html/vulkan_8dox.html",
+        "docs/html/vulkan_guide.html",
+        "docs/html/window_8dox.html",
+        "docs/html/window_guide.html",
+        "glfw.3.3.8.nupkg.sha512",
+        "glfw.nuspec"
+      ]
+    },
+    "OpenTK/4.7.7": {
+      "sha512": "T5SV1uSNgB5dpipFsfMkTnK3IIGzUnl1J2foYu3tqmYwlqLnQfQHFZ6ILiNQMPhXdBhrjnxHIU7ZeWJdNW60sw==",
+      "type": "package",
+      "path": "opentk/4.7.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "opentk.4.7.7.nupkg.sha512",
+        "opentk.nuspec"
+      ]
+    },
+    "OpenTK.Compute/4.7.7": {
+      "sha512": "DvqLgGubdqbb7svXCxDLyYUGcZoIrB4jRN0su1YOOOjdNZnOpC1qUqspFx0NjWGBMq3TipoSSwW1JfN0hbK36A==",
+      "type": "package",
+      "path": "opentk.compute/4.7.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.1/OpenTK.Compute.dll",
+        "lib/netcoreapp3.1/OpenTK.Compute.pdb",
+        "lib/netcoreapp3.1/OpenTK.Compute.xml",
+        "opentk.compute.4.7.7.nupkg.sha512",
+        "opentk.compute.nuspec"
+      ]
+    },
+    "OpenTK.Core/4.7.7": {
+      "sha512": "YlBGXGelHbXKabe2u6EOXkooK8rkFxh97VJlK3M4D0vzrZJltL5aHnB15I+W1adUJVI2P3e16qXJaGd7VsLfgA==",
+      "type": "package",
+      "path": "opentk.core/4.7.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.1/OpenTK.Core.dll",
+        "lib/netstandard2.1/OpenTK.Core.pdb",
+        "lib/netstandard2.1/OpenTK.Core.xml",
+        "opentk.core.4.7.7.nupkg.sha512",
+        "opentk.core.nuspec"
+      ]
+    },
+    "OpenTK.Graphics/4.7.7": {
+      "sha512": "LcSkqJFlSJ4jr/tgBMmqAsLkIrDMgpKmnC8WHzQ9/KMRWbryLawez/Uj52Y7EMwRvSpm3nhs0wZb/ZepbiNhVw==",
+      "type": "package",
+      "path": "opentk.graphics/4.7.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.1/OpenTK.Graphics.dll",
+        "lib/netcoreapp3.1/OpenTK.Graphics.pdb",
+        "lib/netcoreapp3.1/OpenTK.Graphics.xml",
+        "lib/netstandard2.1/OpenTK.Graphics.dll",
+        "lib/netstandard2.1/OpenTK.Graphics.pdb",
+        "lib/netstandard2.1/OpenTK.Graphics.xml",
+        "opentk.graphics.4.7.7.nupkg.sha512",
+        "opentk.graphics.nuspec"
+      ]
+    },
+    "OpenTK.Input/4.7.7": {
+      "sha512": "Ayy88Ia5RoMsAxGMXWT7QzMii5Ch7yBQLVqQWbJAHTRlqBtX05tI8CtCbFuxRPf20790i6wpILpF069av5eN3A==",
+      "type": "package",
+      "path": "opentk.input/4.7.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/OpenTK.Input.dll",
+        "lib/netstandard2.0/OpenTK.Input.pdb",
+        "lib/netstandard2.0/OpenTK.Input.xml",
+        "opentk.input.4.7.7.nupkg.sha512",
+        "opentk.input.nuspec"
+      ]
+    },
+    "OpenTK.Mathematics/4.7.7": {
+      "sha512": "tx6/xM8sdj7OQQp1Q8+xH25jSceU/muvlVircBPvPSPe5OdEtxgOk1OHZrSPu2c4u7u1id5lGf3dWKn8IQdU3g==",
+      "type": "package",
+      "path": "opentk.mathematics/4.7.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.1/OpenTK.Mathematics.dll",
+        "lib/netcoreapp3.1/OpenTK.Mathematics.pdb",
+        "lib/netcoreapp3.1/OpenTK.Mathematics.xml",
+        "lib/netstandard2.1/OpenTK.Mathematics.dll",
+        "lib/netstandard2.1/OpenTK.Mathematics.pdb",
+        "lib/netstandard2.1/OpenTK.Mathematics.xml",
+        "opentk.mathematics.4.7.7.nupkg.sha512",
+        "opentk.mathematics.nuspec"
+      ]
+    },
+    "OpenTK.OpenAL/4.7.7": {
+      "sha512": "5OQhnGgg3tEi+RSw3BWwQkGoews1axpYFvT9q34lr1nBUplSVS6h9IIsnOpBHBqY+dt0Ff3DXTj8YVXTAt9XMQ==",
+      "type": "package",
+      "path": "opentk.openal/4.7.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.1/OpenTK.OpenAL.dll",
+        "lib/netcoreapp3.1/OpenTK.OpenAL.pdb",
+        "lib/netcoreapp3.1/OpenTK.OpenAL.xml",
+        "opentk.openal.4.7.7.nupkg.sha512",
+        "opentk.openal.nuspec"
+      ]
+    },
+    "OpenTK.redist.glfw/3.3.8.30": {
+      "sha512": "dYk7CJ+eOKHVn5IPKCBzmRDHcDy6+oy0fxPntTcl48+NTmOf15e2vKtF9BM7vQFWA8UFmT09Zk05mNHYa3zYWA==",
+      "type": "package",
+      "path": "opentk.redist.glfw/3.3.8.30",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "COPYING.md",
+        "lib/netstandard2.0/_._",
+        "opentk.png",
+        "opentk.redist.glfw.3.3.8.30.nupkg.sha512",
+        "opentk.redist.glfw.nuspec",
+        "runtimes/linux-x64/native/libglfw.so.3.3",
+        "runtimes/osx-arm64/native/libglfw.3.dylib",
+        "runtimes/osx-x64/native/libglfw.3.dylib",
+        "runtimes/win-x64/native/glfw3.dll",
+        "runtimes/win-x86/native/glfw3.dll"
+      ]
+    },
+    "OpenTK.Windowing.Common/4.7.7": {
+      "sha512": "g1277SMVCaHPob+7ZYQ9Of6nm34yWuJ2OTaz/6o9P0B26/rvxGiKm4MalWZzvix4l6FU2tevgpgPi4VecK27FA==",
+      "type": "package",
+      "path": "opentk.windowing.common/4.7.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.1/OpenTK.Windowing.Common.dll",
+        "lib/netcoreapp3.1/OpenTK.Windowing.Common.pdb",
+        "lib/netcoreapp3.1/OpenTK.Windowing.Common.xml",
+        "lib/netstandard2.1/OpenTK.Windowing.Common.dll",
+        "lib/netstandard2.1/OpenTK.Windowing.Common.pdb",
+        "lib/netstandard2.1/OpenTK.Windowing.Common.xml",
+        "opentk.windowing.common.4.7.7.nupkg.sha512",
+        "opentk.windowing.common.nuspec"
+      ]
+    },
+    "OpenTK.Windowing.Desktop/4.7.7": {
+      "sha512": "Kd0UzgSA49meQvW9sfnmtH02rlfwFIox2+fF+5Y4EhIQ8+VwEiiSszs8WkNM9QIhUTHovK4ww384AQkAmpUxIw==",
+      "type": "package",
+      "path": "opentk.windowing.desktop/4.7.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.1/OpenTK.Windowing.Desktop.dll",
+        "lib/netcoreapp3.1/OpenTK.Windowing.Desktop.pdb",
+        "lib/netcoreapp3.1/OpenTK.Windowing.Desktop.xml",
+        "opentk.windowing.desktop.4.7.7.nupkg.sha512",
+        "opentk.windowing.desktop.nuspec"
+      ]
+    },
+    "OpenTK.Windowing.GraphicsLibraryFramework/4.7.7": {
+      "sha512": "TZXZOcnfyPU7zosW+ZPtfemqp4oSBYmQlRQRR7qtEezOBrzotO5ZmlWl0hNti3qjFmJThSxhBn+o/bF7aoBLrA==",
+      "type": "package",
+      "path": "opentk.windowing.graphicslibraryframework/4.7.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.1/OpenTK.Windowing.GraphicsLibraryFramework.dll",
+        "lib/netcoreapp3.1/OpenTK.Windowing.GraphicsLibraryFramework.pdb",
+        "lib/netcoreapp3.1/OpenTK.Windowing.GraphicsLibraryFramework.xml",
+        "opentk.windowing.graphicslibraryframework.4.7.7.nupkg.sha512",
+        "opentk.windowing.graphicslibraryframework.nuspec"
+      ]
+    },
+    "SixLabors.ImageSharp/3.0.1": {
+      "sha512": "o0v/J6SJwp3RFrzR29beGx0cK7xcMRgOyIuw8ZNLQyNnBhiyL/vIQKn7cfycthcWUPG3XezUjFwBWzkcUUDFbg==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/SixLabors.ImageSharp.props",
+        "lib/net6.0/SixLabors.ImageSharp.dll",
+        "lib/net6.0/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.3.0.1.nupkg.sha512",
+        "sixlabors.imagesharp.nuspec"
+      ]
+    },
+    "StbImageSharp/2.27.13": {
+      "sha512": "tHnP2RHgFzWbOS96UqvRO/LYU1WmpMT1bKiig45we+rpaXacBr11Fq2IBF+MqlgyLyNXxRz18E66qr4R9YlSbg==",
+      "type": "package",
+      "path": "stbimagesharp/2.27.13",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net471/StbImageSharp.dll",
+        "lib/netstandard2.0/StbImageSharp.dll",
+        "stbimagesharp.2.27.13.nupkg.sha512",
+        "stbimagesharp.nuspec"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+      "sha512": "ZD9TMpsmYJLrxbbmdvhwt9YEgG5WntEnZ/d1eH8JBX9LBp+Ju8BSBhUGbZMNVHHomWo2KVImJhTDl2hIgw/6MA==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "CSCore >= 1.2.1.2",
+      "OpenTK >= 4.7.7",
+      "SixLabors.ImageSharp >= 3.0.1",
+      "StbImageSharp >= 2.27.13",
+      "glfw >= 3.3.8"
+    ]
+  },
+  "packageFolders": {
+    "/Users/veselka/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/veselka/RiderProjects/pg2_project/pg2_project/pg2_project.csproj",
+      "projectName": "pg2_project",
+      "projectPath": "/Users/veselka/RiderProjects/pg2_project/pg2_project/pg2_project.csproj",
+      "packagesPath": "/Users/veselka/.nuget/packages/",
+      "outputPath": "/Users/veselka/RiderProjects/pg2_project/pg2_project/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/veselka/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "CSCore": {
+            "target": "Package",
+            "version": "[1.2.1.2, )"
+          },
+          "OpenTK": {
+            "target": "Package",
+            "version": "[4.7.7, )"
+          },
+          "SixLabors.ImageSharp": {
+            "target": "Package",
+            "version": "[3.0.1, )"
+          },
+          "StbImageSharp": {
+            "target": "Package",
+            "version": "[2.27.13, )"
+          },
+          "glfw": {
+            "target": "Package",
+            "version": "[3.3.8, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.407/RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'CSCore 1.2.1.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "CSCore",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

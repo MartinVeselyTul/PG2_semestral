@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "X/Z3OR6K7dx39xMqo/TEegvkVwsw11Kohl4BS74cKfYTVfNKWE9kOrVE8HSsSJrmGnn/LXjjN8IdT1Lj80yjeA==",
+  "success": true,
+  "projectFilePath": "/Users/veselka/RiderProjects/pg2_project/pg2_project/pg2_project.csproj",
+  "expectedPackageFiles": [
+    "/Users/veselka/.nuget/packages/glfw/3.3.8/glfw.3.3.8.nupkg.sha512",
+    "/Users/veselka/.nuget/packages/opentk/4.7.7/opentk.4.7.7.nupkg.sha512",
+    "/Users/veselka/.nuget/packages/opentk.compute/4.7.7/opentk.compute.4.7.7.nupkg.sha512",
+    "/Users/veselka/.nuget/packages/opentk.core/4.7.7/opentk.core.4.7.7.nupkg.sha512",
+    "/Users/veselka/.nuget/packages/opentk.graphics/4.7.7/opentk.graphics.4.7.7.nupkg.sha512",
+    "/Users/veselka/.nuget/packages/opentk.input/4.7.7/opentk.input.4.7.7.nupkg.sha512",
+    "/Users/veselka/.nuget/packages/opentk.mathematics/4.7.7/opentk.mathematics.4.7.7.nupkg.sha512",
+    "/Users/veselka/.nuget/packages/opentk.openal/4.7.7/opentk.openal.4.7.7.nupkg.sha512",
+    "/Users/veselka/.nuget/packages/opentk.redist.glfw/3.3.8.30/opentk.redist.glfw.3.3.8.30.nupkg.sha512",
+    "/Users/veselka/.nuget/packages/opentk.windowing.common/4.7.7/opentk.windowing.common.4.7.7.nupkg.sha512",
+    "/Users/veselka/.nuget/packages/opentk.windowing.desktop/4.7.7/opentk.windowing.desktop.4.7.7.nupkg.sha512",
+    "/Users/veselka/.nuget/packages/opentk.windowing.graphicslibraryframework/4.7.7/opentk.windowing.graphicslibraryframework.4.7.7.nupkg.sha512",
+    "/Users/veselka/.nuget/packages/sixlabors.imagesharp/3.0.1/sixlabors.imagesharp.3.0.1.nupkg.sha512",
+    "/Users/veselka/.nuget/packages/stbimagesharp/2.27.13/stbimagesharp.2.27.13.nupkg.sha512",
+    "/Users/veselka/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
